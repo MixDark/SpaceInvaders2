@@ -16,7 +16,7 @@ Una versión moderna y frenética del clásico arcade, desarrollada en Python co
 
 ## Controles
 
-- **Flechas / WASD**: Mover la nave.
+- **Flechas direccionales**: Mover la nave.
 - **Espacio**: Disparar (mantener para fuego automático).
 - **Teclas 1-9**: Activar armas especiales desbloqueadas (trucos).
 - **Tecla 0**: Saltar al siguiente nivel de jefe (debug).
