@@ -19,7 +19,6 @@ Una versión moderna y frenética del clásico arcade, desarrollada en Python co
 - **Flechas direccionales**: Mover la nave.
 - **Espacio**: Disparar (mantener para fuego automático).
 - **Teclas 1-9**: Activar armas especiales desbloqueadas (trucos).
-- **Tecla 0**: Saltar al siguiente nivel de jefe (debug).
 - **P**: Pausar el juego.
 - **R**: Reiniciar tras game over.
 

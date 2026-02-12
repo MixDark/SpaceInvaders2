@@ -454,38 +454,6 @@ def iniciar_juego():
                 elif event.key == pygame.K_9 or event.key == pygame.K_KP9:
                     player.poderes_activos['mega'] = pygame.time.get_ticks() + 3600000
                     player.arma_preferida = 'mega'
-                # BYPASS: Saltar a los niveles de jefe con la tecla 0
-                elif event.key == pygame.K_0 or event.key == pygame.K_KP0:
-                    # Ciclo: 1 -> 11 -> 21 -> 31 -> 1 ...
-                    if nivel_actual < 11:
-                        nivel_actual = 11
-                    elif nivel_actual < 21:
-                        nivel_actual = 21
-                    elif nivel_actual < 31:
-                        nivel_actual = 31
-                    else:
-                        nivel_actual = 1
-                    cambiar_musica(nivel_actual)
-                    # Cargar fondo del nuevo nivel
-                    nombre_fondo = f'imagenes/fondo{nivel_actual}.jpg'
-                    try:
-                        fondo_original = pygame.image.load(nombre_fondo)
-                    except pygame.error:
-                        fondo_original = pygame.image.load('imagenes/fondo1.jpg')
-                    fondo = pygame.transform.scale(fondo_original, (width, height))
-                    # Resetear enemigos y oleadas
-                    grupo_enemigos.empty()
-                    grupo_balas_enemigos.empty()
-                    grupo_balas_jugador.empty()
-                    grupo_powerups.empty()
-                    if nivel_actual in [11, 21, 31]:
-                        enemigos_totales_nivel = 1
-                    else:
-                        enemigos_totales_nivel = 90 + (nivel_actual - 1) * 30
-                    enemigos_generados_nivel = 0
-                    bombas_disponibles = 5
-                    crear_oleada()
-                    tiempo_inicio_nivel = pygame.time.get_ticks()
                 pass # Eliminamos el disparo por evento único
 
         if pausado:
